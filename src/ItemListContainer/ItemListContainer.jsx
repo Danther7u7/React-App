@@ -3,6 +3,10 @@ import ImagenProducto from "../Imagenes/empanadas-de-carne-chilenas-4.jpg";
 import ItemCount from "../components/ItemCount"
 
 const ItemListContainer = () => {
+  function onAdd(count){
+    console.log(`Se han comprado ${count} productos`)
+  }
+
   return (
     <>
       <div className="d-inline-flex">
@@ -12,8 +16,7 @@ const ItemListContainer = () => {
             <div className="card-body">
               <h5 className="card-title">Rica Empanadita!</h5>
               <p className="card-text">Ñam Ñam lleve su empanadita sabrosonga!</p>
-              <ItemCount />
-              <a href="#" className="btn btn-primary">Comprar</a>
+              <ItemCount stock={10} onAdd={onAdd}/>
             </div>
           </div>
         </div>
