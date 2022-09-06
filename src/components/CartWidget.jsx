@@ -5,7 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 const CartWidget = () => {
   return (
     <>
-      <button className="btn btn-outline-dark btn-car" type="submit"><FaShoppingCart /></button>
+      <button className="btn btn-light btn-car" type="submit"><FaShoppingCart /></button>
     </>
   )
 }

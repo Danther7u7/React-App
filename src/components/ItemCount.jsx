@@ -27,7 +27,7 @@ const Count = ({stock, onAdd}) => {
                 <button className="btn btn-secondary btnCount" onClick={reset}> Reset </button>
                 <button className="btn btn-dark btnCount" onClick={add}> + </button>
             </div>
-            <a href="#" className="btn btn-primary" onClick={() => onAdd(count)}>Comprar</a>
+            <a href="#" className="btn btn-primary" onClick={() => onAdd(count)}>Agregar</a>
         </div>
     )
 }

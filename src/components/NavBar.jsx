@@ -7,7 +7,7 @@ import CartWidget from "./CartWidget";
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
             <Logo />
           <div className="collapse navbar-collapse" id="navbarColor03">
