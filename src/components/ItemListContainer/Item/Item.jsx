@@ -1,8 +1,9 @@
 import '../../App.css';
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const Item = ({ producto }) => {
-	const { nombre, marca, stock, precio, img} = producto;
+	const { nombre, marca, stock, precio, img, id} = producto;
 
 	return (
     <div className="card text-center" style={{width: '16rem'}}>
@@ -12,7 +13,9 @@ const Item = ({ producto }) => {
         <h6 className='mb-2'>Marca: {marca}</h6>
         <h6 className='mb-2'>Stock: {stock}</h6>
         <h6 className='mb-2'>Precio: ${precio}</h6>
-        <a href="#" className="btn btn-primary my-2">Ver Producto</a>
+        <Link className= 'nav-link' to={`/detalles/${id}`}>
+          <button className='btn btn-primary my-2 py-3'>Mostrar Mas</button>
+        </Link>
       </div>
     </div>
 	);

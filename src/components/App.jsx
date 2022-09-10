@@ -7,13 +7,14 @@ import React from 'react';
 
 function App() {
 	return (
-		<>
-			<NavBar />
-      <div className='d-flex justify-content-center py-4'>
-        <ItemListContainer />
-      </div>
-			<ItemDetailContainer />
-		</>
+		<BrowserRouter>
+			<NavBar />	
+			<Routes>
+				<Route path='/' element={<div className='py-4 d-flex justify-content-center'><ItemListContainer/></div>}></Route>
+				<Route path='/productos' element={<div className='py-4 d-flex justify-content-center'><ItemListContainer/></div>}></Route>
+				<Route path='/detalles/:id' element={<ItemDetailContainer/>}></Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

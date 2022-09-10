@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-
 import Item from '../Item/Item';
 import { productos } from './../../../Mock/productos';
-import { useParams } from 'react-router-dom';
+
 
 const Producto = () => {
 	const [list, setList] = useState([]);

@@ -6,7 +6,7 @@ import React from 'react';
 const Logo = () => {
 	return (
 		<>
-			<a className='navbar-brand' href='#'>
+			<a className='navbar-brand' href='/productos'>
 				<img className='LogoEmpanadas' src={ImagenLogo} alt='' />
 			</a>
 			<button

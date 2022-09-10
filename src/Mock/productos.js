@@ -5,7 +5,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 1',
         stock: 30,
-        precio: 125000,
+        precio: 12340,
         img: 'https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1'
     },
     {
@@ -14,7 +14,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 2',
         stock: 15,
-        precio: 125000,
+        precio: 24500,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
     {
@@ -23,7 +23,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 3',
         stock: 25,
-        precio: 125000,
+        precio: 25120,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
     {
@@ -32,7 +32,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 4',
         stock: 20,
-        precio: 125000,
+        precio: 54320,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
     {
@@ -41,7 +41,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 5',
         stock: 10,
-        precio: 125000,
+        precio: 2000,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
     {
@@ -50,7 +50,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 6',
         stock: 35,
-        precio: 125000,
+        precio: 54500,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
     {
@@ -59,7 +59,7 @@ export const productos = [
         marca: 'Asus',
         modelo: 'Rog Strix 7',
         stock: 40,
-        precio: 125000,
+        precio: 66870,
         img: "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2020/11/asus-anuncia-o-notebook-gamer-rog-strix-g15-g512lv.jpg?w=1400&ssl=1"
     },
 ];
