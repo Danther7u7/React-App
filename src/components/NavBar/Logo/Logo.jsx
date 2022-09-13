@@ -1,14 +1,17 @@
 import '../../App.css';
-
+import { Link } from 'react-router-dom';
 import ImagenLogo from '../../../Logo/logoTech.svg';
 import React from 'react';
 
 const Logo = () => {
 	return (
-		<>
-			<a className='navbar-brand' href='/productos'>
+		<>	
+			<Link to='/'>
+			<a className='navbar-brand'>
 				<img className='LogoEmpanadas' src={ImagenLogo} alt='' />
 			</a>
+			</Link>
+
 			<button
 				className='navbar-toggler'
 				type='button'

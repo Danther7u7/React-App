@@ -3,8 +3,11 @@
 }
 
 .nav-item a{
-    color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    
 }
 
 .LogoEmpanadas {
@@ -23,4 +26,12 @@
 .card {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: rgb(255, 255, 255);
+}
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: rgba(196, 188, 255, 0.935);
 }

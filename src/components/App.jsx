@@ -10,8 +10,8 @@ function App() {
 		<BrowserRouter>
 			<NavBar />	
 			<Routes>
-				<Route path='/' element={<div className='py-4 d-flex justify-content-center'><ItemListContainer/></div>}></Route>
-				<Route path='/productos' element={<div className='py-4 d-flex justify-content-center'><ItemListContainer/></div>}></Route>
+				<Route path='/' element={<div className='container'><div className="row py-4 g-4"><ItemListContainer/></div></div>}></Route>
+				<Route path='/productos/:categoria' element={<div className='container'><div className="row py-4 g-4"><ItemListContainer/></div></div>}></Route>
 				<Route path='/detalles/:id' element={<ItemDetailContainer/>}></Route>
 			</Routes>
 		</BrowserRouter>

@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
 		const [producto, setProducto] = useState({})
 
 		const getProducto = () => new Promise((resolve, reject) => {
-			setTimeout(() => resolve(productos.find(product => product.id === Number(id))), 100)
+			setTimeout(() => resolve(productos.find(product => product.id === parseInt(id))), 100)
 		})
 
 		useEffect(() => {
