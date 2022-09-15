@@ -8,8 +8,8 @@ const ItemDetail = ({ producto }) => {
     const [cantidad, setCantidad] = useState(1);
     const {carrito, agregarProductoCarrito} =  useContext(CartContext);
 
-    const agregarAlCarrito = (producto, cantidad) => {
-        const productoCarrito = {id: producto.id, cantidad: cantidad}
+    const agregarAlCarrito = (nombre, producto, precio, cantidad) => {
+        const productoCarrito = {id: producto.id, nombre: nombre, precio: precio*cantidad, cantidad: cantidad, }
         agregarProductoCarrito(productoCarrito)
         console.log(carrito)
     }
@@ -52,7 +52,7 @@ const ItemDetail = ({ producto }) => {
                         <button className='btn btn-dark btnCount' onClick={() => cantidadProducto("+")}> +</button>
                     </div>
                     <div className='mb-3'>
-                        <button className='btn btn-success py-3' onClick={() => agregarAlCarrito(producto, cantidad)}>Agregar al Carro</button>
+                        <button className='btn btn-success py-3' onClick={() => agregarAlCarrito(nombre, producto, precio, cantidad)}>Agregar al Carro</button>
                     </div>
                 </div>
             </div>
