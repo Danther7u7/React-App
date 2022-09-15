@@ -20,14 +20,14 @@ const Count = ({stock, onAdd}) => {
 
     return (
         <div>
-            <h6 className="mb-3">Stock: {stock}</h6>
-            <h6 className="mb-3">Cantidad: {count}</h6>
-            <div className="mb-3">
+            <h6>Stock: {stock}</h6>
+            <h6 className="pb-2">Cantidad: {count}</h6>
+            <div className="pb-3">
                 <button className="btn btn-dark btnCount" onClick={substract}> - </button>
                 <button className="btn btn-secondary btnCount" onClick={reset}> Reset </button>
                 <button className="btn btn-dark btnCount" onClick={add}> + </button>
             </div>
-            <a className="btn btn-primary" onClick={() => onAdd(count)}>Agregar al Carro</a>
+            <a href="#" className="btn btn-primary" onClick={() => onAdd(count)}>Agregar</a>
         </div>
     )
 }
