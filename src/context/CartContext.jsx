@@ -46,6 +46,13 @@ const CarritoProvider = (props) => {
         return cart.find((element) => element.producto.id === id)
     }
 
+    const getTotal = () => {
+        let total = 0;
+        cart.forEach((element) => {
+            total += (element.cantidad * element.producto.precio);
+        })
+        return total;
+    }
 
     const clearCart = () => {
         setCarrito([]);
@@ -53,7 +60,7 @@ const CarritoProvider = (props) => {
 
     return (
         <>
-            <CartContext.Provider value={{cart, agregarProductoCarrito, quitarProductoCarrito, clearCart}}>
+            <CartContext.Provider value={{cart, agregarProductoCarrito, quitarProductoCarrito, clearCart, getTotal}}>
                     {props.children}
             </CartContext.Provider>
         </>

@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import "./CartView.css";
-
 const CartView = () => {
-    const {cart, quitarProductoCarrito } = useContext(CartContext);
+    const {cart, quitarProductoCarrito, getTotal, clearCart} = useContext(CartContext);
 
     return (
         <div>
@@ -18,6 +17,10 @@ const CartView = () => {
                     </div>
                 ))
             }
+            <div className="container">
+                <span className="textCart py-4" >Precio Total: ${getTotal()}</span>
+                <button className="btn btn-dark btnCart my-4" onClick={() => clearCart()}> Vaciar Carro </button>
+            </div>
         </div>
 
     )
