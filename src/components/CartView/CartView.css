@@ -1,0 +1,18 @@
+.imgCart {
+    width: 200px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+}
+
+.textCart {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btnCart {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

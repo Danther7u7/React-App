@@ -6,12 +6,12 @@ const ItemDetail = ({ producto }) => {
     /* Destructuring */
 
     const [cantidad, setCantidad] = useState(1);
-    const {carrito, agregarProductoCarrito} =  useContext(CartContext);
-
-    const agregarAlCarrito = (nombre, producto, precio, cantidad) => {
-        const productoCarrito = {id: producto.id, nombre: nombre, precio: precio*cantidad, cantidad: cantidad, }
-        agregarProductoCarrito(productoCarrito)
-        console.log(carrito)
+    const {cart, agregarProductoCarrito} =  useContext(CartContext);
+    
+    const agregarAlCarrito = (nombre, producto, precio, img) => {
+        const productoCarrito = {id: producto.id, nombre: nombre, precio: precio, img:img}
+        agregarProductoCarrito(productoCarrito, cantidad)
+        console.log(cart)
     }
 
     const cantidadProducto = (operacion) => {
@@ -52,7 +52,7 @@ const ItemDetail = ({ producto }) => {
                         <button className='btn btn-dark btnCount' onClick={() => cantidadProducto("+")}> +</button>
                     </div>
                     <div className='mb-3'>
-                        <button className='btn btn-success py-3' onClick={() => agregarAlCarrito(nombre, producto, precio, cantidad)}>Agregar al Carro</button>
+                        <button className='btn btn-success py-3' onClick={() => agregarAlCarrito(nombre, producto, precio, img)}>Agregar al Carro</button>
                     </div>
                 </div>
             </div>
