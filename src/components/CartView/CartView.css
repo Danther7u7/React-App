@@ -12,7 +12,22 @@
     font-size: 1.2rem;
 }
 
+.textPrecio {
+    color: white;
+}
+
 .btnCart {
     margin-left: 1rem;
     margin-right: 1rem;
+    width: 150px;
+    height: 70px;
+    font-weight: bold;
+}
+
+.divTotal {
+    background-color: #170b30;
+}
+
+.btnOp {
+    height: 40px;
 }

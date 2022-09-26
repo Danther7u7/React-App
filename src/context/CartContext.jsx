@@ -5,12 +5,9 @@ const CartContext = createContext()
 
 const CarritoProvider = (props) => {
 
-    const [cart, setCarrito] = useState([]);
+    const [cart, setCart] = useState([]);
 
-    const agregarProductoCarrito = (producto, cantidad) => {
-        // const auxCarrito = cart
-        // auxCarrito.push(producto)
-        // setCarrito(auxCarrito)
+    const addToCart = (producto, cantidad) => {
         if(isInCart(producto.id)) {
             const newCart = [...cart]
             for (const element of newCart) {
@@ -18,9 +15,9 @@ const CarritoProvider = (props) => {
                     element.cantidad = element.cantidad + cantidad
                 }
             }
-            setCarrito(newCart)
+            setCart(newCart)
         } else {
-            setCarrito(
+            setCart(
                 [
                     ...cart,
                     {
@@ -32,18 +29,17 @@ const CarritoProvider = (props) => {
         }
     }
 
-    const quitarProductoCarrito = (id) => {
-        // const auxCarrito = cart
-        // let indice = auxCarrito.findIndex(prod => prod.id === producto.id)
-        // auxCarrito.splice(indice, 1)
-        // setCarrito(auxCarrito)
+    const removeToCart = (id) => {
         const newCart = [...cart].filter(element => element.producto.id !== id)
-        setCarrito(newCart)
-
+        setCart(newCart)
     }
 
     const isInCart = (id) => {
         return cart.find((element) => element.producto.id === id)
+    }
+
+    const clearCart = () => {
+        setCart([]);
     }
 
     const getTotal = () => {
@@ -54,13 +50,17 @@ const CarritoProvider = (props) => {
         return total;
     }
 
-    const clearCart = () => {
-        setCarrito([]);
+    const cantProduct = () => {
+        let cant = 0
+        cart.forEach((element) => {
+            cant += (element.cantidad);
+        })
+        return cant;
     }
 
     return (
         <>
-            <CartContext.Provider value={{cart, agregarProductoCarrito, quitarProductoCarrito, clearCart, getTotal}}>
+            <CartContext.Provider value={{cart, addToCart, removeToCart, clearCart, getTotal, cantProduct}}>
                     {props.children}
             </CartContext.Provider>
         </>

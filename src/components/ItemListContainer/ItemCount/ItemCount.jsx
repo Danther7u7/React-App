@@ -1,35 +1,59 @@
-import {useState} from "react";
+import React, { useState } from 'react';
 
-const Count = ({stock, onAdd}) => {
-    const [count, setCount] = useState(0)
+const Count = ({ stock, onAdd }) => {
+	const [count, setCount] = useState(1);
 
-    function add(){
-        if(count < stock)
-        setCount(count + 1)
-    }
+	const handleClick = (op) => {
+		if (op === 'sumar') {
+			if (count < stock) {
+				setCount(count + 1);
+			}
+		}
+		if (op === 'restar') {
+			if (count > 1) {
+				setCount(count - 1);
+			}
+		}
 
-    function substract(){
-        if(count > 0){
-            setCount(count - 1)
-        }
-    }
+		if (op === 'reset') {
+			setCount(1);
+		}
 
-    function reset(){
-        setCount(0)
-    }
+		if (op === 'agregar') {
+			onAdd(count);
+		}
+	};
 
-    return (
-        <div>
-            <h6>Stock: {stock}</h6>
-            <h6 className="pb-2">Cantidad: {count}</h6>
-            <div className="pb-3">
-                <button className="btn btn-dark btnCount" onClick={substract}> - </button>
-                <button className="btn btn-secondary btnCount" onClick={reset}> Reset </button>
-                <button className="btn btn-dark btnCount" onClick={add}> + </button>
-            </div>
-            <a href="#" className="btn btn-primary" onClick={() => onAdd(count)}>Agregar</a>
-        </div>
-    )
-}
+	return (
+		<div>
+			<h6 className='pb-2'>Cantidad: {count}</h6>
+			<div className='pb-3'>
+				<button
+					className='btn btn-dark btnCount'
+					onClick={() => handleClick('restar')}>
+					{' '}
+					-{' '}
+				</button>
+				<button
+					className='btn btn-secondary btnCount'
+					onClick={() => handleClick('reset')}>
+					{' '}
+					Reset{' '}
+				</button>
+				<button
+					className='btn btn-dark btnCount'
+					onClick={() => handleClick('sumar')}>
+					{' '}
+					+{' '}
+				</button>
+			</div>
+			<button
+				className='btn btn-primary py-3 px-5'
+				onClick={() => handleClick('agregar')}>
+				Agregar
+			</button>
+		</div>
+	);
+};
 
 export default Count;
