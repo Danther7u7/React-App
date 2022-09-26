@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2'
 
 const Count = ({ stock, onAdd }) => {
 	const [count, setCount] = useState(1);
@@ -21,6 +22,11 @@ const Count = ({ stock, onAdd }) => {
 
 		if (op === 'agregar') {
 			onAdd(count);
+			Swal.fire(
+				'Producto agregado!',
+				`Se agregó ${count} producto/s al carro!`,
+				'success'
+			  )
 		}
 	};
 
